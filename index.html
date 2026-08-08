@@ -92,53 +92,42 @@
         <h2 class="section-title">> MODULE_LOADOUT</h2>
 
         <div class="skills-grid">
-
-          <!-- CORE MATRIX -->
           <div class="skills-category">
-            <div class="category-header">L01 // INTERFACE_LAYER</div>
+            <div class="category-header">L01 // UI_ENGINES</div>
+
             <div class="skill-row">
-              <span class="skill-name">VANILLA_JS_ES6</span>
+              <span class="skill-name">REACT_ARCHITECTURE_19</span>
               <div class="skill-bar">
-                <div class="skill-progress overlock" style="width: 95%;"></div>
+                <div class="skill-progress overlock" style="width: 90%;"></div>
               </div>
             </div>
+
             <div class="skill-row">
-              <span class="skill-name">HTML5_SEMANTICS</span>
-              <div class="skill-bar">
-                <div class="skill-progress" style="width: 90%;"></div>
-              </div>
-            </div>
-            <div class="skill-row">
-              <span class="skill-name">CSS_GRID_FLEXBOX</span>
+              <span class="skill-name">TAILWIND_CSS</span>
               <div class="skill-bar">
                 <div class="skill-progress" style="width: 95%;"></div>
               </div>
             </div>
           </div>
 
-          <!-- ENGINE MATRIX -->
+          <!-- CORE DATA COMPUTATION MATRIX -->
           <div class="skills-category">
-            <div class="category-header">L02 // COMPUTE_ENGINES</div>
+            <div class="category-header">L02 // DATA_ENGINES</div>
+
             <div class="skill-row">
-              <span class="skill-name">NODE_RUNTIME</span>
-              <div class="skill-bar">
-                <div class="skill-progress" style="width: 80%;"></div>
-              </div>
-            </div>
-            <div class="skill-row">
-              <span class="skill-name">REST_GRAPHQL_API</span>
+              <span class="skill-name">PYTHON</span>
               <div class="skill-bar">
                 <div class="skill-progress" style="width: 85%;"></div>
               </div>
             </div>
+
             <div class="skill-row">
-              <span class="skill-name">ASYNC_WEBSOCKETS</span>
+              <span class="skill-name">SQL</span>
               <div class="skill-bar">
-                <div class="skill-progress overlock" style="width: 75%;"></div>
+                <div class="skill-progress overlock" style="width: 80%;"></div>
               </div>
             </div>
           </div>
-
         </div>
 
       </section>
@@ -177,7 +166,49 @@
 
       <!-- SECTION 5: UPLINK (CONTACT) -->
       <footer id="uplink" class="hud-panel cell-contact">
-        <!-- Secure handshake console -->
+        <div class="panel-tag">[05 // UPLINK_HANDSHAKE]</div>
+        <h2 class="section-title">> ESTABLISH_COMM_LINK</h2>
+
+        <div class="uplink-grid">
+
+          <!-- Live Intercept Form -->
+          <form class="uplink-form"
+            onsubmit="event.preventDefault(); alert('LINK_ESTABLISHED: MESSAGE INJECTED INTO THE STREAM.');">
+            <div class="form-row">
+              <label class="form-label">SRC_IDENTITY:</label>
+              <input type="text" class="form-input" placeholder="YOUR_NAME // ENTITY_ID" required>
+            </div>
+            <div class="form-row">
+              <label class="form-label">SRC_ENDPOINT:</label>
+              <input type="email" class="form-input" placeholder="SECURE_EMAIL@DOMAIN.COM" required>
+            </div>
+            <div class="form-row">
+              <label class="form-label">DATA_PAYLOAD:</label>
+              <textarea class="form-input form-textarea"
+                placeholder="TRANSMIT PROJECT SPECIFICATIONS OR CONTRACT TERMS..." required></textarea>
+            </div>
+            <button type="submit" class="uplink-btn">EXECUTE_HANDSHAKE</button>
+          </form>
+
+          <!-- Command Shortcuts Array -->
+          <div class="terminal-shortcuts">
+            <div class="shortcut-header">// DIRECT_COMMS_CHANNELS</div>
+
+            <button class="shortcut-node"
+              onclick="navigator.clipboard.writeText('your.email@domain.com'); this.innerText='COPIED_TO_CLIPBOARD'; setTimeout(()=>this.innerText='COPY_EMAIL_STRING', 2000)">
+              <span class="cmd-token">CMD:</span> COPY_EMAIL_STRING
+            </button>
+
+            <a href="#" target="_blank" class="shortcut-node">
+              <span class="cmd-token">NET:</span> CLONE_GITHUB_REPOS
+            </a>
+
+            <a href="#" target="_blank" class="shortcut-node">
+              <span class="cmd-token">LNK:</span> ACCESS_LINKEDIN_CORE
+            </a>
+          </div>
+
+        </div>
       </footer>
     </div>
     <script src="app.js"></script>
