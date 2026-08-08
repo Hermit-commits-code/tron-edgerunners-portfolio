@@ -133,3 +133,98 @@ body {
 .terminal-line {
   margin-bottom: 0.25rem;
 }
+
+.cell-projects {
+  grid-column: span 4;
+}
+
+.section-title {
+  font-size: 1.5rem;
+  font-weight: 900;
+  color: var(--text-main);
+  letter-spacing: 2px;
+  margin-bottom: 2rem;
+  margin-top: 1rem;
+  text-transform: uppercase;
+}
+
+.project-matrix {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+}
+
+.project-card {
+  border: 1px solid var(--grid-line);
+  background-color: rgba(3, 7, 8, .6);
+  padding: 1.5rem;
+  text-decoration: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 250px;
+  transition: transform .1s ease;
+}
+
+.project-card:hover {
+  border-color: var(--loud-magenta);
+  background-color: var(--loud-magenta);
+}
+
+.project-header {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.75rem;
+  color: var(--grid-line);
+  margin-bottom: 1rem;
+}
+
+.project-card:hover .project_id,
+.project-card:hover .project_status {
+  color: var(--bg-deep);
+  font-weight: 900;
+}
+
+.project-title {
+  font-size: 1.8rem;
+  font-weight: 900;
+  color: var(--text-main);
+  text-transform: uppercase;
+  margin-bottom: 0.5rem;
+}
+
+.project-card:hover .project-title {
+  color: #fff;
+}
+
+.project-desc {
+  font-size: 0.85rem;
+  line-height: 1.4;
+  color: #aa8899;
+  /* Dimmed contrast description text */
+  margin-bottom: 1.5rem;
+}
+
+.project-card:hover .project-desc {
+  color: var(--text-main);
+}
+
+/* High Contrast Structural Micro-Tags */
+.project-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.project-tags span {
+  font-size: 0.7rem;
+  border: 1px solid var(--grid-dim);
+  padding: 0.2rem 0.5rem;
+  color: var(--grid-line);
+}
+
+.project-card:hover .project-tags span {
+  border-color: var(--text-main);
+  color: var(--text-main);
+  background-color: rgba(0, 0, 0, 0.2);
+}
