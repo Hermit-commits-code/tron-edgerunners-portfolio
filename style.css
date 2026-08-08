@@ -364,3 +364,140 @@ body {
 .log-entry:hover .log-summary {
   color: var(--text-main);
 }
+
+/* Uplink Handshake Panel Configuration */
+.cell-contact {
+  grid-column: span 4;
+  /* Spans full horizontal canvas area */
+  border-bottom: 2px solid var(--grid-line);
+}
+
+.uplink-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 3rem;
+  margin-top: 1rem;
+}
+
+/* Form Matrix Elements */
+.uplink-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.form-row {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.form-label {
+  font-size: 0.75rem;
+  color: var(--grid-line);
+  letter-spacing: 1px;
+}
+
+.form-input {
+  background-color: rgba(3, 7, 8, 0.8);
+  border: 1px solid var(--grid-dim);
+  padding: 0.8rem;
+  color: var(--text-main);
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  outline: none;
+  transition: border-color 0.1s ease;
+}
+
+/* Blazing Focus Intercept */
+.form-input:focus {
+  border-color: var(--grid-line);
+  background-color: rgba(0, 243, 255, 0.02);
+}
+
+.form-textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
+/* High-Contrast Loud Handshake Button */
+.uplink-btn {
+  background-color: transparent;
+  border: 1px solid var(--grid-line);
+  color: var(--grid-line);
+  font-family: var(--font-mono);
+  font-weight: 900;
+  padding: 1rem;
+  font-size: 0.9rem;
+  letter-spacing: 2px;
+  text-align: center;
+  text-transform: uppercase;
+  transition: all 0.1s ease;
+}
+
+.uplink-btn:hover {
+  background-color: var(--grid-line);
+  color: #000000;
+}
+
+/* Interactive Direct Shortcut Panel */
+.terminal-shortcuts {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.shortcut-header {
+  font-size: 0.8rem;
+  color: #88aabb;
+  letter-spacing: 1px;
+  margin-bottom: 0.5rem;
+}
+
+.shortcut-node {
+  background-color: rgba(0, 68, 85, 0.1);
+  border: 1px solid var(--grid-dim);
+  padding: 0.8rem 1.2rem;
+  color: var(--text-main);
+  text-decoration: none;
+  font-size: 0.8rem;
+  text-align: left;
+  font-family: var(--font-mono);
+  display: block;
+  transition: all 0.1s ease;
+}
+
+.shortcut-node:hover {
+  border-color: var(--loud-yellow);
+  color: var(--loud-yellow);
+}
+
+.cmd-token {
+  color: var(--grid-line);
+  font-weight: 900;
+  margin-right: 0.5rem;
+}
+
+.shortcut-node:hover .cmd-token {
+  color: var(--loud-yellow);
+}
+
+/* Responsive Structural Fallbacks for Mobile Layout Viewports */
+@media (max-width: 900px) {
+  .hud-container {
+    grid-template-columns: 1fr;
+  }
+
+  .cell-hero,
+  .cell-projects,
+  .cell-skills,
+  .cell-experience,
+  .cell-contact {
+    grid-column: span 1;
+  }
+
+  .uplink-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+}
