@@ -501,3 +501,70 @@ body {
     gap: 2rem;
   }
 }
+
+/* ==========================================================================
+   CYBERDECK RESPONSIVE INTERFACE GRID SYSTEM
+   ========================================================================== */
+
+/* --- BREAKPOINT 1: TABLET MAPPING (Screens up to 1024px wide) --- */
+@media (max-width: 1024px) {
+  .hud-container {
+    grid-template-columns: repeat(2, 1fr);
+    /* Collapse from 4 columns to 2 */
+  }
+
+  .cell-header,
+  .cell-hero,
+  .cell-projects,
+  .cell-contact {
+    grid-column: span 2;
+    /* Span full width of the new 2-column grid */
+  }
+
+  .cell-skills,
+  .cell-experience {
+    grid-column: span 1;
+    /* Side-by-side split stays balanced on tablet layouts */
+  }
+
+  .uplink-grid {
+    grid-template-columns: 1fr;
+    /* Stack the contact form and shortcuts vertically */
+    gap: 2rem;
+  }
+}
+
+/* --- BREAKPOINT 2: MOBILE PHONES (Screens up to 640px wide) --- */
+@media (max-width: 640px) {
+  .hud-container {
+    grid-template-columns: 1fr;
+    /* Pure single column stack */
+  }
+
+  .cell-header,
+  .cell-hero,
+  .cell-projects,
+  .cell-skills,
+  .cell-experience,
+  .cell-contact {
+    grid-column: span 1;
+    /* Force every block to occupy its own row */
+  }
+
+  .project-matrix {
+    grid-template-columns: 1fr;
+    /* Stack individual project cards vertically */
+  }
+
+  .cell-header {
+    flex-direction: column;
+    /* Stack top title and live clock vertically */
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+
+  .main-title {
+    font-size: 2.8rem;
+    /* Scale down title slightly so it never clips edges */
+  }
+}
