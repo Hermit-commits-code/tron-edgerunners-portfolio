@@ -1,0 +1,27 @@
+:root {
+  --bg-deep: #030708;
+  --grid-line: #00f3ff;
+  --grid-dim: #004455;
+  /* Dimmed ambient cyan background lines */
+  --loud-yellow: #fce300;
+  /* Edgerunners hazard acid yellow */
+  --loud-magenta: #ff0055;
+  /* Edgerunners system alert pink */
+  --text-main: #e2f1f5;
+  /* High-visibility data white */
+  --font-mono: 'JetBrains Mono', 'Fira Code', monospace;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  cursor: crosshair;
+}
+
+body {
+  background-color: var(--bg-deep);
+  color: var(--text-main);
+  font-family: var(--font-mono);
+  overflow-x: hidden;
+}
