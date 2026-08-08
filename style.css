@@ -1,6 +1,8 @@
 :root {
   --bg-deep: #030708;
+  /* Deep cyberdeck shadow black */
   --grid-line: #00f3ff;
+  /* Tron neon cyan line */
   --grid-dim: #004455;
   /* Dimmed ambient cyan background lines */
   --loud-yellow: #fce300;
@@ -14,9 +16,10 @@
 
 * {
   box-sizing: border-box;
-  padding: 0;
   margin: 0;
+  padding: 0;
   cursor: crosshair;
+  /* Forced cybernetic UI feel */
 }
 
 body {
@@ -24,4 +27,109 @@ body {
   color: var(--text-main);
   font-family: var(--font-mono);
   overflow-x: hidden;
+}
+
+/* Master Cyberdeck Grid Container */
+.hud-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-auto-rows: minmax(100px, auto);
+  gap: 0px;
+  /* Snaps borders together perfectly */
+  max-width: 1600px;
+  margin: 0 auto;
+  border-left: 1px solid var(--grid-dim);
+  border-right: 1px solid var(--grid-dim);
+}
+
+/* Global Panel Properties */
+.hud-panel {
+  border: 1px solid var(--grid-dim);
+  padding: 2rem;
+  background-color: transparent;
+  transition: border-color 0.2s ease, background-color 0.2s ease;
+  position: relative;
+}
+
+/* Hovering sharpens the grid boundaries */
+.hud-panel:hover {
+  border-color: var(--grid-line);
+}
+
+/* Explicit Layout Mapping */
+.cell-header {
+  grid-column: span 4;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 2px solid var(--grid-line);
+  padding: 1rem 2rem;
+}
+
+/* Hero Panel Grid Mapping */
+.cell-hero {
+  grid-column: span 4;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 450px;
+}
+
+/* Panel Label Tagging */
+.panel-tag {
+  position: absolute;
+  top: 0.5rem;
+  left: 0.5rem;
+  font-size: 0.75rem;
+  color: var(--grid-line);
+  opacity: 0.7;
+}
+
+/* Massive Typography Customization */
+.identity-block {
+  margin-top: 2rem;
+}
+
+.main-title {
+  font-size: clamp(3rem, 8vw, 6.5rem);
+  font-weight: 900;
+  /* Fixed typo from 9090 */
+  line-height: 0.9;
+  letter-spacing: -2px;
+  color: var(--text-main);
+  text-transform: uppercase;
+}
+
+.sub-title {
+  font-size: 1rem;
+  color: var(--grid-line);
+  letter-spacing: 2px;
+  margin-top: 0.5rem;
+}
+
+/* Edgerunners Style High-Contrast Accent Banner */
+.hazard-banner {
+  background-color: var(--loud-yellow);
+  color: #000000;
+  padding: 0.5rem;
+  font-weight: 900;
+  font-size: 0.85rem;
+  letter-spacing: 3px;
+  margin: 2rem 0;
+  text-align: center;
+  transform: skewX(-6deg);
+  /* Skew element for high-octane anime energy */
+}
+
+/* Boot Terminal Interface */
+.boot-terminal {
+  background-color: rgba(0, 243, 255, 0.03);
+  border-top: 1px solid var(--grid-dim);
+  padding: 1rem;
+  font-size: 0.85rem;
+  color: #88aabb;
+}
+
+.terminal-line {
+  margin-bottom: 0.25rem;
 }
